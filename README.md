@@ -1,59 +1,95 @@
-# It03Frontend
+# IT03 Frontend (Angular + Material)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+Frontend application for IT 03 approval workflow.
 
-## Development server
+Implements:
+- IT 03-1 document list
+- IT 03-2 approve dialog
+- IT 03-3 reject dialog
+- Angular Material UI
+- Backend pagination integration
+- Snackbar notifications
 
-To start a local development server, run:
+---
 
-```bash
+## Tech Stack
+
+- Angular 17+
+- Angular Material
+- TypeScript
+- RxJS
+
+---
+
+## Features
+
+- Material table
+- Status chips (Pending / Approved / Rejected)
+- Disable approve/reject if not pending
+- Dialog modal with required reason
+- Backend API integration
+- Pagination support
+
+---
+
+## Project Structure
+
+```
+src/app
+ ├── core
+ │    ├── models
+ │    └── services
+ ├── features
+ │    └── it03
+```
+
+---
+
+## How to Run
+
+### 1. Clone repository
+
+```
+git clone https://github.com/KD24-ENG/IT03Frontend.git
+cd IT03Frontend
+```
+
+### 2. Install dependencies
+
+```
+npm install
+```
+
+### 3. Run application
+
+```
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open browser:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
+## Environment Configuration
+
+Update API URL inside:
+
+```
+core/services/it03.service.ts
 ```
 
-## Building
+Example:
 
-To build the project run:
-
-```bash
-ng build
+```
+http://localhost:5001/api/it03
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## Notes
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Make sure backend is running before starting frontend.
